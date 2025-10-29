@@ -1,0 +1,39 @@
+/* popup.css — 控制弹出窗口大小与基础样式 */
+html,
+body {
+  width: 250px;
+  height: 100px;
+  margin: 0;
+  padding: 8px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 14px;
+  margin: 0 0 4px 0;
+}
+
+p {
+  margin: 0 0 6px 0;
+}
+
+button {
+  font-size: 12px;
+  padding: 4px 6px;
+}
+
+/* 专门为弹出页的设置按钮设置天蓝背景 */
+#open-options {
+  background-color: #87ceeb; /* 天蓝 */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#open-options:active {
+  transform: translateY(1px);
+}

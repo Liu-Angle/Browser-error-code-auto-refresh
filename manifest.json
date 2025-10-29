@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "502状态自动刷新",
+  "version": "2.6",
+  "description": "如果检测到502错误，则自动刷新页面，直到页面不再显示502错误或页面被关闭为止。",
+  "permissions": ["tabs", "storage", "alarms"],
+  "icons": {
+    "16": "IMG/小猫.png",
+    "48": "IMG/小猫.png",
+    "128": "IMG/小猫.png"
+  },
+  "background": {
+    "service_worker": "JS/background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "IMG/小猫.png",
+      "48": "IMG/小猫.png",
+      "128": "IMG/小猫.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["JS/content.js"]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>扩展设置 - 自动刷新</title>
+    <link rel="stylesheet" href="CSS/options.css" />
+  </head>
+  <body>
+    <h1>自动刷新设置</h1>
+
+    <div class="drag-wrap">
+      <div class="box">
+        <h2>持续刷新的状态码</h2>
+        <div id="monitor-list" class="dropzone" aria-label="monitor-list"></div>
+      </div>
+
+      <div class="box">
+        <h2>可用状态码</h2>
+        <div
+          id="available-list"
+          class="dropzone"
+          aria-label="available-list"
+        ></div>
+      </div>
+    </div>
+
+    <!-- 状态码拖动框下面的帮助按钮 -->
+    <div class="help-area">
+      <button id="help-codes" class="secondary">状态码说明</button>
+      <button id="move-all-out" class="secondary">全部移出</button>
+      <button id="move-all-in" class="secondary">全部移入</button>
+    </div>
+
+    <div class="controls">
+      <label
+        >刷新间隔（秒）:
+        <input id="interval-seconds" type="number" min="1" max="1000" value="5"
+      /></label>
+      <button id="save">保存</button>
+      <button id="reset-default" class="secondary">恢复默认</button>
+      <span id="status"></span>
+    </div>
+
+    <script src="JS/options.js"></script>
+  </body>
+</html>
